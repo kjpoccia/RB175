@@ -1,0 +1,20 @@
+<h2><%= @name %></h2>
+
+<h3>Email Address</h3>
+<p><%= @email %></p>
+
+<h3>Interests</h3>
+
+<p><%= @interests.join(', ') %></p>
+
+<h4>Other Users</h4>
+<ul>
+	<% @users.each do |user| %>
+	<% next if user == @name %>
+	<li>
+		<a href="/users/<%= user %>"><%= user %></a>
+	</li>
+	<% end %>
+</ul>
+
+

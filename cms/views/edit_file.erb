@@ -1,0 +1,14 @@
+
+<form action="/<%= @file_name %>/edit" method="post">
+	<dl>
+		<dt>
+			<label for="file_content">Edit contents of <%= @file_name %></label>
+		</dt>
+		<dd>
+			<textarea name="file_content" value="<% @content %>"rows ="20" cols="100"><%= @content %></textarea>
+		</dd>
+	</dl>
+	<fieldset class="actions">
+		<input type="submit" value="Save Changes">
+	</fieldset>
+</form>

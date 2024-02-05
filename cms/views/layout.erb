@@ -1,0 +1,25 @@
+<!doctype html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CMS</title>
+    <link rel="stylesheet" href="/stylesheets/cms_app.css" type="text/css">
+    <!-- <script src="/javascripts/jquery-3.7.1.js"></script> -->
+    <!-- <script src="/javascripts/cms_app.js"></script> -->
+  </head>
+
+  <body>
+
+    <% if session[:alert] %>
+    <div class="flash">
+      <p><%= session.delete(:alert) %></p>
+    </div>
+    <% end %>
+
+    <div>
+      <%= yield %>
+    </div>
+  </body>
+</html>

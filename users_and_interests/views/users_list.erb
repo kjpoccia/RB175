@@ -1,0 +1,9 @@
+<h2>List of Users</h2>
+
+<ul>
+	<% @users.each do |name| %>
+		<li>
+			<a href="users/<%= name %>" ><%= name %></a>
+		</li>
+	<% end %>
+</ul>
